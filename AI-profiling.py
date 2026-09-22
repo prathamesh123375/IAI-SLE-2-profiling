@@ -103,3 +103,32 @@ def time_it(fn, *args, runs=5):
         result = fn(*args)
         times.append((time.perf_counter() - t0) * 1000)  # ms
     return sum(times) / len(times), result
+if __name__ == "__main__":
+    size = 20
+    seed = 42
+
+    start = (0, 0)
+    goal = (size - 1, size - 1)
+
+    maze = generate_maze(size, seed)
+
+    dfs_time, (dfs_path, dfs_nodes) = time_it(
+        dfs_solve, start, goal, maze
+    )
+
+    bfs_time, (bfs_path, bfs_nodes) = time_it(
+        bfs_solve, start, goal, maze
+    )
+
+    print("BFS vs DFS Profiling")
+    print("--------------------")
+
+    print("DFS:")
+    print("Path length:", len(dfs_path))
+    print("Nodes expanded:", dfs_nodes)
+    print("Average time:", dfs_time, "ms")
+
+    print("\nBFS:")
+    print("Path length:", len(bfs_path))
+    print("Nodes expanded:", bfs_nodes)
+    print("Average time:", bfs_time, "ms")
