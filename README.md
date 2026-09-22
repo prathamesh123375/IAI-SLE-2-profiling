@@ -1,7 +1,7 @@
 # IAI-SLE-2-profiling
-BFS vs DFS Maze Pathfinding — Profiling Study
+## BFS vs DFS Maze Pathfinding — Profiling Study
 
-📌 Project Overview
+### 📌 Project Overview
 
 This project compares Depth-First Search (DFS) and Breadth-First Search (BFS) for solving a randomly generated maze.
 
@@ -17,24 +17,24 @@ The experiment uses a perfect maze, which is a spanning-tree maze where exactly 
 
 ---
 
-🧠 Algorithms Used
+## 🧠 Algorithms Used
 
-1. Depth-First Search (DFS)
+### 1. Depth-First Search (DFS)
 
 DFS explores one branch as deeply as possible before backtracking.
 
-Implementation:
+### Implementation:
 
 - Iterative
 - Stack-based
 - Fixed neighbour order
 - Returns the path and number of nodes expanded
 
-2. Breadth-First Search (BFS)
+### 2. Breadth-First Search (BFS)
 
 BFS explores the maze level by level, starting from the source cell.
 
-Implementation:
+### Implementation:
 
 - Queue-based
 - Same fixed neighbour order as DFS
@@ -42,7 +42,7 @@ Implementation:
 
 ---
 
-🗺️ Problem Statement
+## 🗺️ Problem Statement
 
 A randomly generated perfect maze is given.
 
@@ -55,7 +55,7 @@ The maze is generated using a randomized DFS backtracking approach. Since it is 
 
 ---
 
-⚙️ Profiling Method
+## ⚙️ Profiling Method
 
 The following Python tools were used:
 
@@ -74,9 +74,9 @@ Each algorithm was executed 5 times per test case, giving 15 runs per algorithm.
 
 ---
 
-📊 Results
+## 📊 Results
 
-Summary
+## Summary
 
 Metric| DFS| BFS
 Best-case time| 0.0206 ms| 0.0121 ms
@@ -98,7 +98,7 @@ Test Case| Algorithm| Avg. Time| Nodes Expanded| Path Length
 
 ---
 
-🔍 Observations
+## 🔍 Observations
 
 Small Maze — 5 × 5
 
@@ -135,7 +135,7 @@ DFS therefore expanded about 2.9× more nodes and took about 4.1× more time in 
 
 ---
 
-🔬 Profiling
+## 🔬 Profiling
 
 The worst-case workload used a 25 × 25 maze with 200 repeated solves per algorithm.
 
@@ -154,7 +154,7 @@ py-spy record -o flamegraph.svg --rate 100 -- python run_experiments.py
 
 ---
 
-📈 Key Findings
+## 📈 Key Findings
 
 1. Both DFS and BFS successfully solved every tested maze.
 2. Because the mazes are spanning trees, both algorithms always returned the same path.
@@ -167,7 +167,7 @@ py-spy record -o flamegraph.svg --rate 100 -- python run_experiments.py
 
 ---
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 - Python
 - DFS (Depth-First Search)
@@ -175,41 +175,9 @@ py-spy record -o flamegraph.svg --rate 100 -- python run_experiments.py
 - cProfile
 - time.perf_counter()
 - Maze generation using randomized DFS backtracking
-
 ---
 
-📁 Project Structure
-
-BFS-DFS-Maze-Profiling/
-│
-├── agent.py
-├── run_experiments.py
-├── results.json
-├── flamegraph.svg
-├── BFS_DFS_Profiling_Report.pdf
-├── CONTRIBUTION_LOG.md
-└── README.md
-
-«Update the filenames above if your actual GitHub repository uses different filenames.»
-
----
-
-🤖 AI Contribution
-
-AI tools were used to help with:
-
-- Maze-generation code
-- Neighbour-lookup code
-- DFS/BFS implementation
-- Profiling and experiment scripts
-- Chart and flame-graph generation
-- Report formatting
-
-The experiments, results, validation of the output, and final analysis were performed and checked by the student.
-
----
-
-📝 Conclusion
+## 📝 Conclusion
 
 This experiment demonstrates that the performance of DFS and BFS depends on the structure and size of the search space.
 
@@ -218,13 +186,3 @@ For the tested perfect mazes, both algorithms always found the same path because
 The 25 × 25 experiment showed the largest difference, where BFS expanded about 2.9× fewer nodes and ran about 4.1× faster than DFS.
 
 ---
-
-👨‍💻 Project Information
-
-Course: 02AML204 — Introduction to Artificial Intelligence
-Project: SLE-2 — Profiling Report
-Topic: BFS vs DFS Maze Pathfinding
-
----
-
-⭐ This project demonstrates practical comparison and profiling of two fundamental AI search algorithms: BFS and DFS.
