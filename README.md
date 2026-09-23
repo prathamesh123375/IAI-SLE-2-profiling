@@ -65,10 +65,10 @@ The following Python tools were used:
 
 Three maze sizes were tested:
 
-Case| Maze Size
-Best Case| 5 × 5
-Average Case| 12 × 12
-Worst Case| 25 × 25
+Case| Maze Size|
+Best Case| 5 × 5|
+Average Case| 12 × 12|
+Worst Case| 25 × 25|
 
 Each algorithm was executed 5 times per test case, giving 15 runs per algorithm.
 
@@ -78,23 +78,23 @@ Each algorithm was executed 5 times per test case, giving 15 runs per algorithm.
 
 ## Summary
 
-Metric| DFS| BFS
-Best-case time| 0.0206 ms| 0.0121 ms
-Average-case time| 0.1525 ms| 0.1279 ms
-Worst-case time| 0.9340 ms| 0.2284 ms
-Average nodes expanded| 251.7| 120.7
+Metric| DFS| BFS|
+Best-case time| 0.0206 ms| 0.0121 ms|
+Average-case time| 0.1525 ms| 0.1279 ms|
+Worst-case time| 0.9340 ms| 0.2284 ms|
+Average nodes expanded| 251.7| 120.7|
 
 BFS was faster in all three measured cases, with the largest difference occurring on the 25 × 25 maze.
 
 Detailed Results
 
-Test Case| Algorithm| Avg. Time| Nodes Expanded| Path Length
-5 × 5| DFS| 0.0206 ms| 15| 11
-5 × 5| BFS| 0.0121 ms| 13| 11
-12 × 12| DFS| 0.1525 ms| 129| 65
-12 × 12| BFS| 0.1279 ms| 136| 65
-25 × 25| DFS| 0.9340 ms| 611| 165
-25 × 25| BFS| 0.2284 ms| 213| 165
+Test Case| Algorithm| Avg. Time| Nodes Expanded| Path Length|
+5 × 5| DFS| 0.0206 ms| 15| 11|
+5 × 5| BFS| 0.0121 ms| 13| 11|
+12 × 12| DFS| 0.1525 ms| 129| 65|
+12 × 12| BFS| 0.1279 ms| 136| 65|
+25 × 25| DFS| 0.9340 ms| 611| 165|
+25 × 25| BFS| 0.2284 ms| 213| 165|
 
 ---
 
