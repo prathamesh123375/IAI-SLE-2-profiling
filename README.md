@@ -141,8 +141,6 @@ DFS therefore expanded about **2.9× more nodes** and took about **4.1× more ti
 
 The worst-case workload used a 25 × 25 maze with **200 repeated solves per algorithm**.
 
-`cProfile` was used to generate a flame graph because `py-spy` could not be installed in the sandboxed environment.
-
 The profiling showed that:
 
 * DFS accounted for approximately **76%** of the captured runtime.
@@ -176,7 +174,7 @@ py-spy record -o flamegraph.svg --rate 100 -- python run_experiments.py
 * **Python**
 * **DFS (Depth-First Search)**
 * **BFS (Breadth-First Search)**
-* **cProfile**
+* **py-spy**
 * **time.perf_counter()**
 * Maze generation using randomized DFS backtracking
 
