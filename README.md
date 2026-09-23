@@ -58,7 +58,7 @@ The maze is generated using a randomized DFS backtracking approach. Since it is 
 
 The following Python tools were used:
 
-* `cProfile` — profiling and call-graph/flame-graph analysis
+* `py-spy` — profiling and call-graph/flame-graph analysis
 * `time.perf_counter()` — accurate execution-time measurement
 * Manual node counter — counts cells visited for the first time
 
